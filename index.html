@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>求人办事话术包 · 6 个场景 24 句现成开口</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.app{max-width:430px;min-height:100vh;margin:0 auto;background:#FAF7F2;position:relative;overflow:hidden}
+.pad{padding:0 20px 50px}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:29px;line-height:1.28;font-weight:800;letter-spacing:-.01em}
+.h2{font-size:18px;font-weight:800;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.h2::before{content:"";width:4px;height:16px;border-radius:3px;background:var(--teal)}
+.h3{font-size:15px;font-weight:800;margin:0 0 8px}
+.sub{color:#63736F;font-size:14px}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.b{background:#E4F0ED;color:#4E8C84}
+.tag.c{background:#ECE9F7;color:#6E65A8}.tag.d{background:#E3ECF5;color:#4B7196}
+.rule{height:1px;background:#EFE8DF;margin:16px 0}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.75}
+.lead{color:#63736F;font-size:14.5px}
+
+/* ---------- 首页 ---------- */
+.hero{position:relative;padding:42px 0 6px;text-align:center}
+.blob{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:200px;height:200px;
+  background:radial-gradient(circle at 35% 30%,#FBE3CE,#F6D5C2 45%,#DCEBE6 100%);
+  filter:blur(7px);opacity:.7;z-index:0;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .h1{margin:12px 0 8px}
+.hero .lead{color:#63736F;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 2px}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.tipbar{display:flex;gap:9px;align-items:flex-start;background:#EAF4F1;border-radius:16px;padding:13px 14px;margin:20px 0 0}
+.tipbar .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;background:#71B0A4;color:#fff;font-size:14px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.tipbar .tx{flex:1;font-size:13px;color:#4B5C58;line-height:1.7}
+
+/* ---------- 速查表 ---------- */
+.quick{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:16px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 6px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.55}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800;letter-spacing:.02em;padding-bottom:8px}
+.qt td:first-child,.qt th:first-child{width:64px;padding-left:4px}
+.qt tr:last-child td{border-bottom:0}
+.qt .sc{font-weight:800;color:#33403D;font-size:12px}
+.qt .g{color:#54635F}
+.qt .v1{color:#3F6F68;font-weight:700}
+.qt .v2{color:#8A6238;font-weight:700}
+.qt .v3{color:#5E5790;font-weight:700}
+.qtcap{display:flex;align-items:center;justify-content:space-between;margin:0 4px 6px}
+.qtcap .t{font-size:15px;font-weight:800}
+.qtcap .b{font-size:11px;color:#A5AFA9}
+
+/* ---------- 场景 ---------- */
+.sc-head{display:flex;align-items:flex-start;gap:12px;margin:30px 0 12px}
+.sc-no{flex:0 0 38px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;
+  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.sc-head .tt{flex:1}
+.sc-head .tt .n{font-size:19px;font-weight:800;line-height:1.35}
+.sc-head .tt .d{font-size:13px;color:#8C9A96;margin-top:3px}
+.ver{background:#fff;border-radius:20px;padding:17px 16px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-bottom:12px}
+.vhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.vhead .nm{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px}
+.vhead .dot{width:9px;height:9px;border-radius:50%}
+.copyall{border:1px solid #E9E1D6;background:#fff;border-radius:999px;padding:5px 12px;font-size:11.5px;color:#8C9A96;font-weight:700;cursor:pointer;font-family:inherit}
+.copyall:active{background:#F5F1EA}
+.line{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:14px;
+  margin-bottom:9px;cursor:pointer;transition:all .15s ease}
+.line:active{transform:scale(.99);border-color:#71B0A4;background:#EAF4F1}
+.line .tx{flex:1;font-size:14.5px;line-height:1.66;color:#3E4B48}
+.line .cp{flex:0 0 20px;width:20px;height:20px;border-radius:7px;background:#EAF3F0;color:#4E8C84;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.meta{margin-top:12px;border-radius:14px;padding:12px 13px;background:#F7F3EC}
+.meta .r{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:13px;line-height:1.7;color:#54635F}
+.meta .r .k{flex:0 0 74px;font-size:11.5px;font-weight:800;color:#9AA8A4;letter-spacing:.02em;padding-top:2px}
+.meta .r .v{flex:1}
+.meta .r .v em{font-style:normal;color:#33403D;font-weight:700}
+
+/* ---------- 自测 ---------- */
+.qwrap{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08)}
+.qbar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin-bottom:16px}
+.qbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178);transition:width .3s ease}
+.qcnt{font-size:12.5px;color:#8C9A96;font-weight:700;margin-bottom:9px}
+.qcnt b{color:#4E8C84;font-size:15px}
+.qtext{font-size:18px;font-weight:700;line-height:1.55;margin-bottom:16px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;background:#FAF7F2;border:1.5px solid #EFE7DC;
+  border-radius:16px;padding:13px 14px;font-size:14.5px;line-height:1.6;color:#3E4B48;cursor:pointer;font-family:inherit;transition:all .15s ease}
+.opt:active{transform:scale(.99)}
+.opt .k{flex:0 0 23px;width:23px;height:23px;border-radius:8px;background:#EDE5DA;color:#8C9A96;font-size:12.5px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:2px}
+.opt.sel{border-color:#71B0A4;background:#EAF4F1}
+.opt.sel .k{background:#71B0A4;color:#fff}
+.backbtn{border:0;background:transparent;color:#8C9A96;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;padding:2px 0;margin-top:14px}
+.res-hero{border-radius:22px;padding:24px 20px;position:relative;overflow:hidden}
+.res-hero .kicker{font-size:12px;letter-spacing:.16em;font-weight:700;opacity:.78}
+.res-hero .tname{font-size:27px;font-weight:900;margin:8px 0 4px}
+.res-hero .oneline{font-size:14.5px;line-height:1.75;margin-top:12px}
+.res-list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.res-item{background:#fff;border-radius:16px;padding:13px 14px;display:flex;gap:11px;align-items:flex-start;box-shadow:0 4px 16px rgba(74,90,84,.06)}
+.res-item .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.res-item .tx{flex:1;font-size:14px;line-height:1.72;color:#4B5C58}
+.res-item .tx b{display:block;color:#33403D;font-size:14.5px;margin-bottom:3px}
+.rbtn{display:block;width:100%;padding:15px;border:0;border-radius:17px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:11px}
+.rbtn.p{background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;box-shadow:0 8px 20px rgba(78,140,132,.24)}
+.rbtn.s{background:#fff;border:1px solid #E9E1D6;color:#6B7A76}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.85;margin-top:26px}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(min-width:431px){.app{box-shadow:0 0 60px rgba(80,90,84,.10)}}
+
+/* ---------- 产品12 追加 ---------- */
+.sectnav{display:flex;gap:8px;margin:18px 0 0}
+.sectnav button{flex:1;border:1px solid #E9E1D6;background:#fff;border-radius:14px;padding:11px 8px;font-size:13px;font-weight:700;color:#5C6B67;cursor:pointer;font-family:inherit}
+.sectnav button:active{background:#F5F1EA}
+.disc{background:#F7F3EC;border-radius:16px;padding:13px 14px;margin-top:18px;font-size:12.5px;line-height:1.8;color:#7C8A86}
+.disc b{color:#54635F}
+.line .tx .lb{font-size:11.5px;color:#9AA7A3;font-weight:800;margin-right:6px}
+.askq{margin-top:14px;padding:12px 13px;background:#FAF6F0;border-radius:14px;border:1px dashed #E4DCD0}
+.askq .aq{font-size:12.5px;line-height:1.75;color:#6E7D79;margin-bottom:8px}
+.askq .aq b{color:#4B5C58}
+.bars{background:#fff;border-radius:20px;padding:16px 16px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.bars .bt{font-size:13px;font-weight:800;color:#33403D;margin-bottom:14px}
+.barrow{margin-bottom:12px}
+.barrow .bl{display:flex;justify-content:space-between;font-size:12.5px;color:#54635F;font-weight:700;margin-bottom:6px}
+.barrow .bl span:last-child{color:#4E8C84;font-weight:800}
+.bar{height:9px;border-radius:99px;background:#EBE3D9;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scorebar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin:14px 0 6px}
+.scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scoretxt{font-size:12px;color:#8C9A96;font-weight:700}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <section class="pad" id="s-home">
+    <div class="hero">
+      <div class="blob"></div>
+      <div class="eyebrow">ASK KIT</div>
+      <h1 class="h1">求人办事话术包</h1>
+      <p class="lead">6 个要开口求人的场合，24 句现成说法<br>搭把手、拍板、配合、搭线、推荐、跟进</p>
+      <div class="chips">
+        <span class="chip">6 个场景</span>
+        <span class="chip">24 句可复制</span>
+        <span class="chip">1 张速查表</span>
+        <span class="chip">附 4 题开口难度小测</span>
+      </div>
+    </div>
+
+    <div class="tipbar">
+      <div class="ic">i</div>
+      <div class="tx">点任意一句就能复制，粘到聊天框里改两个字就能用。顶上的速查表适合开口前扫一眼。</div>
+    </div>
+
+    <div class="quick">
+      <div class="qtcap"><div class="t">30 秒速查表</div><div class="b">要开口前先扫一眼</div></div>
+      <table class="qt">
+        <thead><tr><th>场景</th><th>什么时候用</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+        <tbody>
+<tr><td class="sc">求同事搭把手</td><td class="g v1">小活，对方顺手能做</td><td class="g v2">这周五前帮我核一遍表，二十分钟够吗</td><td class="g v3">把耗时说具体</td></tr>
+<tr><td class="sc">求领导拍板</td><td class="g v1">你有两种做法想让人定</td><td class="g v2">我想了两种做法，您看哪种更稳</td><td class="g v3">带上备选方案</td></tr>
+<tr><td class="sc">求客户配合</td><td class="g v1">要挪时间或补材料</td><td class="g v2">清单周三前给我行吗，琐碎事我来</td><td class="g v3">给对方省事</td></tr>
+<tr><td class="sc">求熟人搭线</td><td class="g v1">你要认识一个人</td><td class="g v2">帮我递句话就行，不方便就算</td><td class="g v3">先说清目的</td></tr>
+<tr><td class="sc">请人推荐</td><td class="g v1">你有明确筛选标准</td><td class="g v2">我把要求整理成几条发你</td><td class="g v3">先给筛选标准</td></tr>
+<tr><td class="sc">跟进进度</td><td class="g v1">托付几天没回音</td><td class="g v2">报个到：上次那事有准信了吗</td><td class="g v3">问一次就放手</td></tr>
+        </tbody>
+      </table>
+      <div class="rule"></div>
+      <div class="muted">用法：先认场景，再挑一句更贴近的改两个字。同一场景三档力度不同，按你和对方的关系远近选。</div>
+    </div>
+
+    <div class="sectnav">
+      <button onclick="goSection('s-scenes')">看 24 句话</button>
+      <button onclick="showTest()">做开口难度小测</button>
+    </div>
+
+    <div class="disc"><b>使用说明</b><br>本内容是自我观察与练习工具，不构成专业心理评估、诊断或医疗建议。话术是参考句不是标准答案，请按你面对的人调整。</div>
+  </section>
+
+  <section class="pad" id="s-scenes">
+    <div class="sc-head">
+      <div class="sc-no">6</div>
+      <div class="tt"><div class="n">开口模板</div><div class="d">每个场景三档说法，外加对方多半会反问的那句和你怎么接。</div></div>
+    </div>
+<div class="sc-head" id="sc1">
+<div class="sc-no">1</div>
+<div class="tt"><div class="n">求同事顺手帮忙</div><div class="d">小事一件：借个东西、替个班、帮忙看一眼数据。你开口怕显得使唤人，不开口又确实耽误事。</div></div>
+</div>
+<div class="ver" id="v1">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v1">复制整段</button></div>
+<div class="line" data-copy="小张，有件事想麻烦你：这周五之前帮我把这份表核一遍，大概二十分钟，你方便吗？"><div class="tx"><span class="lb">直接开口</span>小张，有件事想麻烦你：这周五之前帮我把这份表核一遍，大概二十分钟，你方便吗？</div><div class="cp">拷</div></div>
+<div class="line" data-copy="小张，我这边周五要交一份核对过的表，能不能占用你二十分钟？你要是不方便，我明天早上自己去弄也行。"><div class="tx"><span class="lb">铺垫留台阶</span>小张，我这边周五要交一份核对过的表，能不能占用你二十分钟？你要是不方便，我明天早上自己去弄也行。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="小张，问个事儿——这周五前帮我核一份表，两三下就好，回头我请你喝咖啡。"><div class="tx"><span class="lb">轻松</span>小张，问个事儿——这周五前帮我核一份表，两三下就好，回头我请你喝咖啡。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「这活不难吧？占我多少时间啊？」</div>
+<div class="line" data-copy="不难，就是核对两列数字。给我二十分钟就够，你要是忙我改天再弄。"><div class="tx"><span class="lb">这么接</span>不难，就是核对两列数字。给我二十分钟就够，你要是忙我改天再弄。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">同事跟你同一层、日常会碰面，而且这件事小、对方做起来不费力。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「行啊，发我」——顺手的小忙多数人会接；但也有人会先问占多少时间。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">把耗时说具体：几分钟还是半小时，对方好判断。被反问「为什么找我」时，说清是他手上现成的材料，不是你懒得自己做。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc2">
+<div class="sc-no">2</div>
+<div class="tt"><div class="n">求领导批个事或给资源</div><div class="d">要批一个流程、要一个人手、要一点预算。这句话对着上级说，重量和对着同事差很多。</div></div>
+</div>
+<div class="ver" id="v2">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v2">复制整段</button></div>
+<div class="line" data-copy="王总，有件事想请您定一下：这次的外包预算按原方案是八万，我想按分成模式走，您看行不行。"><div class="tx"><span class="lb">直接开口</span>王总，有件事想请您定一下：这次的外包预算按原方案是八万，我想按分成模式走，您看行不行。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="王总，这事我想了两种做法，想听听您的意思：一种是按原预算走，另一种是改成分成，风险小一点但收益薄一些。"><div class="tx"><span class="lb">铺垫留台阶</span>王总，这事我想了两种做法，想听听您的意思：一种是按原预算走，另一种是改成分成，风险小一点但收益薄一些。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="王总，占您两分钟——项目预算这块我有个想法，说完您要是觉得不行，就按原方案走。"><div class="tx"><span class="lb">轻松</span>王总，占您两分钟——项目预算这块我有个想法，说完您要是觉得不行，就按原方案走。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「为什么要改？原来的方案不是批过了吗？」</div>
+<div class="line" data-copy="原来那版是按理想情况估的。这次实际工期多了三周，我怕按原方案做下来利润被吃掉，所以想改成分成，风险分在两边。"><div class="tx"><span class="lb">这么接</span>原来那版是按理想情况估的。这次实际工期多了三周，我怕按原方案做下来利润被吃掉，所以想改成分成，风险分在两边。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">对方有权拍板，而且你有备选方案；纯诉求、没做功课的开口容易碰软钉子。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「先放这儿我看看」——这是好信号，说明对方愿意看，但也说明还没答应。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">被问「为什么找你」不用答这种假设题，直接讲你的判断依据。对方要的多半不是结论，是结论背后的那两三条依据。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc3">
+<div class="sc-no">3</div>
+<div class="tt"><div class="n">求客户配合时间或资料</div><div class="d">想让对方挪一下时间，或者补一份材料。客户客气，但客气里带着「这事值不值得」的意思。</div></div>
+</div>
+<div class="ver" id="v3">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v3">复制整段</button></div>
+<div class="line" data-copy="张总，为了赶月底上线，想请您帮忙确认一份验收清单，周三前回我就行，剩下的我们来弄。"><div class="tx"><span class="lb">直接开口</span>张总，为了赶月底上线，想请您帮忙确认一份验收清单，周三前回我就行，剩下的我们来弄。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="张总，有两件事想跟您商量：一是验收清单能不能周三前给到，二是评审时间能不能挪到下午。您看哪一项更方便？"><div class="tx"><span class="lb">铺垫留台阶</span>张总，有两件事想跟您商量：一是验收清单能不能周三前给到，二是评审时间能不能挪到下午。您看哪一项更方便？</div><div class="cp">拷</div></div>
+<div class="line" data-copy="张总，跟您讨个时间：验收清单周三前给我行吗？剩下的琐碎事我来处理，不占您时间。"><div class="tx"><span class="lb">轻松</span>张总，跟您讨个时间：验收清单周三前给我行吗？剩下的琐碎事我来处理，不占您时间。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「这个清单为什么非得周三？晚两天不行吗？」</div>
+<div class="line" data-copy="周三是我们内部锁定的上线窗口，晚两天就要顺延一轮，那一轮会赶上周末。我想办法把环节压紧一点，尽量保周三。"><div class="tx"><span class="lb">这么接</span>周三是我们内部锁定的上线窗口，晚两天就要顺延一轮，那一轮会赶上周末。我想办法把环节压紧一点，尽量保周三。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">对方是客户、双方有合作在谈；你手上要的东西他自己就能给，不需要再走流程。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「我看看时间」——通常不是拒绝，是在确认这件事要花他多少精力。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">被追问原因时给时间线而不是解释：你卡在哪个节点、晚几天会影响谁。这比说「比较急」有效得多。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc4">
+<div class="sc-no">4</div>
+<div class="tt"><div class="n">求熟人介绍个资源</div><div class="d">你想认识一个人，需要中间人带一句话。开口的不是帮忙，是引荐，份量更重。</div></div>
+</div>
+<div class="ver" id="v4">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v4">复制整段</button></div>
+<div class="line" data-copy="姐，有个人想请你帮我引荐一下：他做区域仓这块，正好和我们在谈的合作对得上。你方便的话帮我说一句。"><div class="tx"><span class="lb">直接开口</span>姐，有个人想请你帮我引荐一下：他做区域仓这块，正好和我们在谈的合作对得上。你方便的话帮我说一句。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="姐，有个事想麻烦你：我这边想认识一个做区域仓的人，正经渠道我自己去找太慢。你要是刚好认识，帮我递句话就行，不方便就算。"><div class="tx"><span class="lb">铺垫留台阶</span>姐，有个事想麻烦你：我这边想认识一个做区域仓的人，正经渠道我自己去找太慢。你要是刚好认识，帮我递句话就行，不方便就算。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="姐，帮我搭个线呗——我想认识个做区域仓的朋友，你要是有合适的，介绍我们认识一下。"><div class="tx"><span class="lb">轻松</span>姐，帮我搭个线呗——我想认识个做区域仓的朋友，你要是有合适的，介绍我们认识一下。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「我跟他很熟，你确定要介绍的话我可就说了啊？」</div>
+<div class="line" data-copy="确定，麻烦你了。麻烦你的时候我会先把来意说清楚，不让你为难。"><div class="tx"><span class="lb">这么接</span>确定，麻烦你了。麻烦你的时候我会先把来意说清楚，不让你为难。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">你手上确实有具体需求、能说清找谁干什么，而不是「就想认识一下」。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「我看看有没有合适的人」——熟人会先替你筛一轮，不一定马上答应。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">被问「你找他干什么」时，把目的和后续动作一起给：见面聊什么、聊完你做什么。介绍人怕的是被介绍之后还得替你圆。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc5">
+<div class="sc-no">5</div>
+<div class="tt"><div class="n">求别人给你推荐</div><div class="d">你在找岗位、找客户、找合作方，想请对方顺手推荐一个。推荐意味着他要用自己的信用替你背书。</div></div>
+</div>
+<div class="ver" id="v5">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v5">复制整段</button></div>
+<div class="line" data-copy="我在找 X 方向的客户，想请你有合适的就推荐给我一个。我把要求整理成几条发你，你照着推就行。"><div class="tx"><span class="lb">直接开口</span>我在找 X 方向的客户，想请你有合适的就推荐给我一个。我把要求整理成几条发你，你照着推就行。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="我在找 X 方向的合作方，手上有几条线索但都不太合适。你要是正好认识靠谱的，帮我引一个；没有也没关系，我再自己找。"><div class="tx"><span class="lb">铺垫留台阶</span>我在找 X 方向的合作方，手上有几条线索但都不太合适。你要是正好认识靠谱的，帮我引一个；没有也没关系，我再自己找。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="我在攒 X 方向的人脉，你要是身边有合适的，帮我推一个，改天请你吃饭。"><div class="tx"><span class="lb">轻松</span>我在攒 X 方向的人脉，你要是身边有合适的，帮我推一个，改天请你吃饭。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「我推荐了，人家不靠谱算谁的？」</div>
+<div class="line" data-copy="责任在我这边。我先把话说明白：做什么的、做到什么程度、什么条件算合格，我这边先过一遍再往下走，不会让你替我担着。"><div class="tx"><span class="lb">这么接</span>责任在我这边。我先把话说明白：做什么的、做到什么程度、什么条件算合格，我这边先过一遍再往下走，不会让你替我担着。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">你找的东西有明确标准（比如岗位、资质、行业方向），不是泛泛地说「有合适的介绍」。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「我把要求发我看看」——多数人会先要筛选标准，这是在帮你降低风险。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">被问「你为什么不去自己找」时，讲清你试过的路径和它卡在哪，比讲决心有用。推荐人需要的是理由能对外讲。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc6">
+<div class="sc-no">6</div>
+<div class="tt"><div class="n">求人后催进度不显得催</div><div class="d">事情托出去几天没回音，你想问，又怕把人情用薄。催得太软没回音，催得太硬伤关系。</div></div>
+</div>
+<div class="ver" id="v6">
+<div class="vhead"><div class="nm"><span class="dot"></span>三档说法</div><button class="copyall" data-group="v6">复制整段</button></div>
+<div class="line" data-copy="上次那件事想跟你问一下进度，是已经定下来了，还是还要再等等？你要是忙我这边先安排别的。"><div class="tx"><span class="lb">直接开口</span>上次那件事想跟你问一下进度，是已经定下来了，还是还要再等等？你要是忙我这边先安排别的。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="不催你，就是跟你报个到：上次托的那件事，我这边后面还有安排，你方便的时候回我一句就行。"><div class="tx"><span class="lb">铺垫留台阶</span>不催你，就是跟你报个到：上次托的那件事，我这边后面还有安排，你方便的时候回我一句就行。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="打扰一下～上次那事有信儿了吗？我这边好接着往下走。"><div class="tx"><span class="lb">轻松</span>打扰一下～上次那事有信儿了吗？我这边好接着往下走。</div><div class="cp">拷</div></div>
+<div class="askq">
+<div class="aq"><b>对方答应前多半会反问这一句：</b>「你怎么这么急，是不是上面催你了？」</div>
+<div class="line" data-copy="确实有节点，我这边下周要交东西，所以想早点有个准信。不是催你，纯粹是我要排后面的事。"><div class="tx"><span class="lb">这么接</span>确实有节点，我这边下周要交东西，所以想早点有个准信。不是催你，纯粹是我要排后面的事。</div><div class="cp">拷</div></div>
+</div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">托付过去几天到一周、事情本身有你的时间线在走；超过一周还没回音，问一次不算催。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「我催一下」——多数人会帮你问，但这次开口要消耗一次人情，所以只问一次。</div></div>
+<div class="r"><div class="k">你怎么接</div><div class="v">问完就放手，接下来自己同时走别的路。反复催会把你从「被帮的人」变成「等着的人」。</div></div>
+</div>
+</div>
+    <div class="disc"><b>使用说明</b><br>本内容是自我观察与练习工具，不构成专业心理评估、诊断或医疗建议。</div>
+  </section>
+
+  <section class="pad" id="s-test">
+    <div class="sc-head">
+      <div class="sc-no">测</div>
+      <div class="tt"><div class="n">你开口求事的难度</div><div class="d">4 道题，看你是难以开口、开口清楚，还是一开口就用尽全力。</div></div>
+    </div>
+    <div class="qwrap" id="qwrap"></div>
+    <div class="disc"><b>使用说明</b><br>本内容是自我观察与练习工具，不构成专业心理评估、诊断或医疗建议。结果只反映你这次的选择。</div>
+  </section>
+
+  <div class="foot">
+    求人办事话术包 · 6 个场景 24 句现成开口<br>
+    单文件网页，手机打开即用，断网也能看
+  </div>
+
+</div>
+<div class="toast" id="toast"></div>
+<script>
+var QZ = [["想请同事帮你核一份表，你开口的头一句是？",[["「那个……有个小事不知道方不方便……」",[2,0,1]],["「这周五之前帮我核一遍表，大概二十分钟，你方便吗？」",[0,2,2]],["「在吗？有个事想问你。」",[1,1,0]]]],["想请领导在两种方案里定一个，你会？",[["「王总，这个事您看着办就行。」",[1,0,0]],["「我想了两种做法：一种按原预算，一种改成分成，想听听您的意思。」",[0,2,2]],["「王总，这个事比较急，您看今天能不能定一下？」",[2,1,1]]]],["客户问「这个清单非得周三吗」，你会？",[["「也不是，主要是上面催得紧。」",[2,1,0]],["「周三是我们内部锁定的上线窗口，晚两天要顺延一轮，我想办法把环节压紧。」",[0,2,2]],["「周三吧，麻烦您了。」",[1,0,1]]]],["托付的事一周没回音，你会？",[["再等等吧，也许对方在忙。",[1,0,1]],["问一次进度，问完就自己同时走别的路。",[0,2,2]],["隔几天就问一次进度。",[2,0,0]]]]];
+var RES = [["开口费劲型","你想求个人，话在嘴里绕两圈。铺垫太长、抱歉太多，对方读完不知道你到底要什么。",2,[[["把请求放在开头","先说要请什么，再补为什么，收尾给一句「不方便也没关系」。"],["客套删一半","「不好意思打扰」留一句就够，铺垫越长，对方越难判断你的请求。"],["给请求划范围","说明是帮忙看一眼、递一句话还是引荐一次，范围清楚对方好答。"],["把感谢留到事成之后","开口阶段反复道谢，会让对方觉得你是在给人添麻烦。"]]],"今天挑一个你本来想开口求的人，写一句不超过三十字的话，把它发出去。","#5B7FA6"],["开口清楚型","你能把请求说得清楚，对方也知道接下来该做什么。缺的是把理由也摆上，让对方愿意替你把话说出去。",5,[[["补一句你的处境","说明为什么现在要办、为什么找他，对方替你说话时才有素材。"],["给对方留退路","加一句「不方便也没关系」，对方答应得安心，拒绝也不尴尬。"],["信息一次给全","时间、材料、标准一次发完，少几轮来回问。"],["事成之后单独谢一次","结果出来了再认真谢一次，比开口时的客套更让人记得住。"]]],"今天把你上一次求人的事写成三句：我要什么、为什么找他、不方便也行的兜底。","#4E8C84"],["一开口就用力型","你一开口就把所有期待都压上去。对方压力一大就往后退半步，人情也就薄了。",8,[[["从一个小请求起步","先问一句「那边还在处理吗」，比直接请人办事更容易被答应。"],["别替对方把话说满","把承诺换成自己的准备，责任留在自己这边。"],["少用恳求的语气","连着几个「麻烦你」「特别不好意思」，会把自己放到很低的位置。"],["给对方拒绝的余地","「不行你直说」反而更容易换来一句「我帮你问问」。"]]],"今天把一段请求里表示歉意的词删掉一半，读一遍，看语气是不是更像求助而不是求饶。","#B46B3C"]];
+var DIMS = [["ask","开口压力"],["prep","铺垫习惯"],["clear","请求清晰度"]];
+var qi = 0, picks = [];
+
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('on');},1500);}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('已复制，去聊天框里粘上');},function(){fallback(txt);});
+  } else { fallback(txt); }
+}
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制，去聊天框里粘上');}catch(e){toast('长按选中这段文字也可以复制');}
+  document.body.removeChild(ta);
+}
+document.addEventListener('click',function(e){
+  var line=e.target.closest('[data-copy]');
+  if(line){copyText(line.getAttribute('data-copy'));return;}
+  var grp=e.target.closest('[data-group]');
+  if(grp){
+    var id=grp.getAttribute('data-group');
+    var box=document.getElementById(id);
+    var lines=box?box.querySelectorAll('[data-copy]'):[];
+    var arr=[];for(var i=0;i<lines.length;i++){arr.push(lines[i].getAttribute('data-copy'));}
+    copyText(arr.join('\n'));return;
+  }
+  var opt=e.target.closest('.opt');
+  if(opt){pick(parseInt(opt.getAttribute('data-i'),10));return;}
+});
+
+function goSection(id){
+  var el=document.getElementById(id);
+  if(el){window.scrollTo(0,el.offsetTop-8);}
+}
+function showTest(){qi=0;picks=[];renderQ();goSection('s-test');}
+function renderQ(){
+  var wrap=document.getElementById('qwrap');
+  if(qi>=QZ.length){renderResult();return;}
+  var q=QZ[qi];
+  var h='<div class="qcnt">第 <b>'+(qi+1)+'</b> / '+QZ.length+' 题</div>';
+  h+='<div class="qbar"><i style="width:'+Math.round((qi+1)/QZ.length*100)+'%"></i></div>';
+  h+='<div class="qtext">'+q[0]+'</div><div class="opts">';
+  for(var i=0;i<q[1].length;i++){
+    h+='<button class="opt" data-i="'+i+'"><span class="k">'+'ABC'[i]+'</span><span>'+q[1][i][0]+'</span></button>';
+  }
+  h+='</div><button class="backbtn" onclick="goSection(\'s-scenes\')">先返回上面看看话术</button>';
+  wrap.innerHTML=h;
+}
+function pick(i){
+  var q=QZ[qi];
+  if(!q) return;
+  picks.push(q[1][i][1]);
+  qi++;
+  renderQ();
+}
+function renderResult(){
+  var w=0,l=0,it=0;
+  for(var i=0;i<picks.length;i++){w+=picks[i][0];l+=picks[i][1];it+=picks[i][2];}
+  var total=w+l+it;
+  var band=RES[2];
+  for(var j=0;j<RES.length;j++){ if(total<=RES[j][2]) { band=RES[j]; break; } }
+  var mx=QZ.length*2;
+  var h='<div class="res-hero" style="background:linear-gradient(135deg,'+band[5]+'22,'+band[5]+'0A)">';
+  h+='<div class="kicker" style="color:'+band[5]+'">开口难度 · 测试结果</div>';
+  h+='<div class="tname" style="color:'+band[5]+'">'+band[0]+'</div>';
+  h+='<div class="oneline" style="color:#4B5C58">'+band[1]+'</div>';
+  h+='</div>';
+  h+='<div class="bars"><div class="bt">三项得分（每项满分 '+mx+'）</div>';
+  var vals=[w,l,it];
+  for(var k=0;k<DIMS.length;k++){
+    var pct=Math.round(vals[k]/mx*100);
+    h+='<div class="barrow"><div class="bl"><span>'+DIMS[k][1]+'</span><span>'+vals[k]+' / '+mx+'</span></div>';
+    h+='<div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  }
+  h+='<div class="scoretxt">总分 '+total+' / '+(mx*3)+' 分</div>';
+  h+='<div class="scorebar"><i style="width:'+Math.round(total/(mx*3)*100)+'%"></i></div>';
+  h+='</div>';
+  h+='<div class="res-list">';
+  for(var t=0;t<band[3][0].length;t++){
+    h+='<div class="res-item"><div class="ic" style="background:'+band[5]+'">'+(t+1)+'</div><div class="tx"><b>'+band[3][0][t][0]+'</b>'+band[3][0][t][1]+'</div></div>';
+  }
+  h+='</div>';
+  h+='<div class="disc"><b>今天能完成的小练习</b><br>'+band[4]+'</div>';
+  h+='<button class="rbtn p" onclick="showTest()">再测一次</button>';
+  h+='<button class="rbtn s" onclick="goSection(\'s-home\')">回到首页</button>';
+  document.getElementById('qwrap').innerHTML=h;
+}
+</script>
+</body>
+</html>
